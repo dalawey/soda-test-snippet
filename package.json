@@ -1,7 +1,7 @@
 {
   "name": "soda-test-snippet",
   "displayName": "soda test snippet",
-  "publisher": "Chen Dalawey",
+  "publisher": "ChenDalawey",
   "description": "this extention help to write unit test",
   "version": "0.0.1",
   "license": "MIT",
