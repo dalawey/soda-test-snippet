@@ -3,7 +3,7 @@
   "displayName": "soda test snippet",
   "publisher": "ChenDalawey",
   "description": "this extention help to write unit test",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
