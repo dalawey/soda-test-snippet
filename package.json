@@ -1,0 +1,21 @@
+{
+  "name": "soda-test-snippet",
+  "displayName": "soda test snippet",
+  "publisher": "Chen Dalawey",
+  "description": "tshi extention help to write unit test",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

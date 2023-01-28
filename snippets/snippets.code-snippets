@@ -1,0 +1,72 @@
+{
+    "create basic sample code soda-test":{
+        "prefix": "!basicsample soda-test",
+        "body": [
+            "import { expect, describe, it, TR } from 'soda-test'",
+            "",
+            "@describe('Basic Sample')",
+            "class SampleCase {",
+            "",
+            "   @it('validates that 1+1 is 2')",
+            "   sampleStep(): TR {",
+            "       expect(1+1).to.equal(2)",
+            "   }",
+            "}"
+        ],
+        "description": "The following code is a sample for a test that checks that 1+1 is 2:"
+    },
+    "create before methods (control) soda-test":{
+        "prefix": "!before soda-test",
+        "body": [
+            "before(): void {",
+            "   console.log('***before')",
+            "}"        
+        ],
+        "description": "this method will be executed during test-run once, before running any of the test-step methods"
+    },
+    "create beforeEach methods (control) soda-test":{
+        "prefix": "!beforeEach soda-test",
+        "body": [
+            "beforeEach(): void {",
+            "   console.log('***beforeEach')",
+            "}"        
+        ],
+        "description": "this method will be executed during test-run, before running each of the test-step methods"
+    },
+    "create afterEach methods (control) soda-test":{
+        "prefix": "!afterEach soda-test",
+        "body": [
+            "afterEach(): void {",
+            "   console.log('***afterEach')",
+            "}"        
+        ],
+        "description": "this method will be executed during test-run, after running each of the test-step methods"
+    },
+    "create after methods (control) soda-test":{
+        "prefix": "!after soda-test",
+        "body": [
+            "after(): void {",
+            "   console.log('***after')",
+            "}"        
+        ],
+        "description": "this method will be exeucted during test-run once, after runnig all of the test-step methods"
+    },
+    "Spy method on object in a test-step soda-test":{
+        "prefix": "!spy method on object soda-test",
+        "body": [
+            "@it('should spy on log')",
+            "logSpy( @spy(console, 'log') console_log_spy: SinonSpy ): TR {",
+            "   foo()",
+            "   expect(console_log_spy.calledOnce).to.be.true",
+            "   expect(console_log_spy).to.have.been.calledOnce",
+            "}"        
+        ],
+        "description": [
+            "In this example we want to call the foo method, and validate the call to console.log. Note that log is a method defined in the",
+            "console object. We need to create a 'spy' on this method.",
+            "In the test-step method, define an argument of type SinonSpy. To make this argument become a spy object, we need to add",
+            "decorator to the argument called spy and give to the decorator 2 arguments: the object the method to spy is on it, and the",
+            "name of the method to spy"
+        ]
+    }
+}
